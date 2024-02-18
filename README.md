@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Filesystem-based Routing
 
-## Getting Started
+/*NextJS uses files & folders to define routes*/
 
-First, run the development server:
+Only files & folders inside the "app" folder are considered!
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# NextJS Works With React Server Components
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Components which require a special “environment”
+NextJS provides such an environment
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+React Server Components ---> Rendered only on the server Never on the client
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# Filenames Matter!
 
-## Learn More
+NextJS relies on reserved, special filenames
 
-To learn more about Next.js, take a look at the following resources:
+But the filenames only matter inside the "app" folder
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+page.js      --> Define page content
+layout.js    --> Define wrapper around pages
+not-found.js --> Define "Not Found" fallback page
+error.js     --> Define "Error" fallback page
+route.js     --> Allows you to create an API route (i.e., a page which does NOT return JSX code but instead data, e.g., in the JSON format)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# NextJS Renders Pages On The Server
 
-## Deploy on Vercel
+Server (Backend-side ) --> Page/ HTML content is rendered on the server --> rendered on the client (ClientFrontend-side )
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Dynamic Route 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Syntax --> [placeholder]
+
